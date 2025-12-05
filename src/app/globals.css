@@ -1,0 +1,131 @@
+/* CLAUDE IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit&family=Outfit&display=swap');
+/* END CLAUDE IMPORTS */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f9f9f9;
+  font-family: Roboto, sans-serif;
+}
+
+h1, h2 {
+  font-family: var(--font-geist-sans);
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.rtext-content p {
+  margin: 10px 0 !important;
+}
+
+/* Slide down animation for top tray */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.5s ease-out forwards;
+}
+
+/* Fade out animation for closing tray */
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease-in forwards;
+}
+
+/* CLAUDE CSS */
+body {
+  background: #1a1a26; 
+  color: #e5e5e5;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: Outfit, sans-serif;
+  font-size: 1.875rem;
+}
+
+h2 {
+  font-size: calc(1.875rem * 0.85);
+  font-weight: 800;
+}
+
+h3 {
+  font-size: calc(1.875rem * 0.7);
+  font-weight: 600;
+}
+
+button {
+  background-color: #6366f1;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+input, select, textarea {
+  background-color: #30303b;
+  color: #c2c2c2;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px #6366f120;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #c2c2c280;
+  opacity: 1;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+
+/* PER-VIEW STYLES */
+
+.view-with-heading-color h1,
+.view-with-heading-color h2,
+.view-with-heading-color h3,
+.view-with-heading-color h4,
+.view-with-heading-color h5,
+.view-with-heading-color h6 {
+  color: var(--heading-color) !important;
+}
+/* END PER-VIEW STYLES */
+
+
+/* END CLAUDE CSS */
